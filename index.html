@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Happy Bithday amor de mi vida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            position: relative;
+            z-index: 2;
+        }
+
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0ff;
+            font-size: 3rem;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-left: 2rem;
+            flex-direction: column;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            z-index: 3;
+        }
+
+        nav a {
+            display: block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: rgba(0,255,255,0.1);
+            color: #0ff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(0,255,255,0.3);
+        }
+
+        canvas#particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 6rem;
+            background: linear-gradient(45deg, #fbc7d4, #FF3CAC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px rgba(142, 68, 173, 0.7);
+        }
+
+        #sec1 {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            gap: 10px;             
+        }
+
+        .img-borde {
+            border: 5px solid #FF3CAC; 
+            border-radius: 15px;
+            box-shadow:
+                0 0 5px #FF3CAC,
+                0 0 10px #FF3CAC,
+                0 0 20px #FF3CAC,
+                0 0 40px #FF3CAC;
+            transition: transform 0.3s;
+            max-width: 90%;
+            height: auto;
+        }
+
+        #play-music-btn {
+        animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 10px #FF3CAC;
+            }
+            50% {
+                box-shadow: 0 0 20px #FF3CAC, 0 0 30px #FF3CAC;
+            }
+            100% {
+                box-shadow: 0 0 10px #FF3CAC;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+
+    <nav>
+        <a href="#sec1">1</a>
+        <a href="#sec2">2</a>
+        <a href="#sec3">3</a>
+        <a href="#sec4">4</a>
+        <a href="#sec5">5</a>
+        <a href="#sec6">6</a>
+        <a href="#sec7">7</a>
+        <a href="#sec8">8</a>
+        <a href="#sec9">9</a>
+        <a href="#sec10">10</a>
+        <a href="#sec11">11</a>
+        <a href="#sec12">12</a>
+    </nav>
+
+    <div class="container">
+        <section id="sec1" >
+            <h1>¡Happy Birthday!</h1>
+            <p>Felices 30 añitos para la bebé más hermosa </p>
+        </section>
+        <section id="sec2">
+            <p style="font-size: 2rem;">Espero que disfrute este día tan especial</p>
+        </section>
+        <section id="sec3" style="font-size: 2rem;">
+            <p style="margin: 10rem;">
+                Y que siga cumpliendo muchos años más, para que pueda seguir cumpliendo todas las metas que se propone.
+            </p>
+        </section>
+        <section id="sec4">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">Así como esa niña pequeña llena de sueños</p>
+            <figure>
+                <img src="./img/img_child.png" alt="Feliz cumpleaños" class="img-borde" />
+            </figure>
+        </section>
+        <section id="sec5">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Ha logrado llegar tan lejos, a pesar de todo los obstáculos.
+                <br>Convirtiéndose en la mujer fuerte y hermosa que es ahora.
+            </p>
+            <figure>
+                <img src="./img/img_adult.png" alt="Feliz cumpleaños" class="img-borde" />
+            </figure>
+        </section>
+        <section id="sec6">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Siga luchando por sus sueños, hasta lograr todos sus objetivos.
+            </p>
+        </section>
+        <section id="sec7">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Es una mujer muy fuerte e inteligente que puede llegar tan lejos como desee.
+            </p>
+            <p>
+                Siga así, porque esta haciendo todo bien.
+            </p>
+        </section>
+        <section id="sec8">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Yo sé que usted sola puede con todo.
+            </p>
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Pero siempre estare para darle mi apoyo
+                incondicional en todo lo que pueda.
+            </p>
+        </section>
+        <section id="sec9">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Gracias por aparecer en mi vida y ser una persona muy especial para mi.
+            </p>
+        </section>
+        <section id="sec10">
+            <p style="font-size: 3rem; padding-bottom: 2rem;">
+                La quiero muchísimo.
+            </p>
+        </section>
+        <section id="sec11">
+            <p style="font-size: 2rem; padding-bottom: 2rem;">
+                Dios la bendiga siempre.
+            </p>
+        </section>
+        <section id="sec12">
+            <p style="font-size: 1rem; padding-bottom: 2rem;">
+                Espero que le haya gustado este pequeño y humilde regalo.
+            </p>
+        </section>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="media/John_Legend_All_Of_Me.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    <button 
+        id="play-music-btn" 
+        style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #FF3CAC;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #FF3CAC;
+            z-index: 9999;
+        " 
+        onclick="enabledMusic()">
+        🎵 Activar música
+    </button>
+
+    <script>
+        const canvas = document.getElementById("particles");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+
+        for (let i = 0; i < 100; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 2 + 1,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5
+            });
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#0ff";
+            for (let p of particles) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                p.x += p.speedX;
+                p.y += p.speedY;
+
+                // Reposición si salen del canvas
+                if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+            }
+            requestAnimationFrame(drawParticles);
+        }
+
+        drawParticles();
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        function enabledMusic(){
+            const btn = document.getElementById("play-music-btn");
+            const audio = document.getElementById("bg-music");
+            audio.play().then(() => {
+                btn.style.display = "none"; // Oculta el botón si lo deseas
+                audio.volume = 0.09; // opcional: baja volumen
+
+            }).catch((err) => {
+                console.log("Error al intentar reproducir audio:", err);
+                btn.textContent = "⚠️ No se pudo reproducir";
+            });
+        }
+    </script>
+</body>
+</html>
